@@ -81,7 +81,7 @@ $db['default'] = array(
 	'database' => 'db5d6n6p3cogel',
 	'dbdriver' => 'postgre',
 	'dbprefix' => '',
-	'pconnect' => TRUE,
+	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
