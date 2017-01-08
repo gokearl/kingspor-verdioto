@@ -25,6 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 // $config['base_url'] = 'http://kingsportv.com/verdi/';
 $config['base_url'] = 'http://verdioto.herokuapp.com';
+// $config['base_url'] = 'http://localhost:8080/verdi';
 
 /*
 |--------------------------------------------------------------------------
@@ -315,7 +316,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = '+*CZONbA|kCdD]N{3ax)-O%h2ngBi%A:';
 
 /*
 |--------------------------------------------------------------------------
@@ -371,13 +372,13 @@ $config['encryption_key'] = '';
 $config['sess_driver'] = 'database';
 $config['sess_cookie_name']		= 'ci_session';
 $config['sess_expiration']		= 7200;
-$config['sess_expire_on_close']	= FALSE;
+$config['sess_expire_on_close']	= TRUE;
 $config['sess_encrypt_cookie']	= FALSE;
 $config['sess_use_database']	= TRUE;
 $config['sess_table_name']		= 'ci_sessions';
 // $config['sess_match_ip']		= FALSE;
 // $config['sess_match_useragent']	= TRUE;
-// $config['sess_time_to_update']	= 300;
+$config['sess_time_to_update']	= 300;
 $config['sess_save_path'] = 'ci_sessions';
 /*
 |--------------------------------------------------------------------------
