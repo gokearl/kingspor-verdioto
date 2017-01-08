@@ -11,6 +11,7 @@ class Auth extends CI_Controller {
 
     public function login()
     {
+        session_start();
         $_POST = $_GET;
         $this->form_validation->set_rules('username', 'Kullanıcı Adı', 'required');
         $this->form_validation->set_rules('password', 'Şifre', 'required');
