@@ -111,8 +111,8 @@ class Welcome extends CI_Controller {
 		} else {
 			// $value = (is_numeric($this->input->post('value')) ? (int)$this->input->post('value') : $this->input->post('value'));
 			$value = $this->input->post('value');
-			$value = strtoupper($value);
 			$value = str_replace(array('i', 'ı', 'ü', 'ğ', 'ş', 'ö', 'ç'), array('İ', 'I', 'Ü', 'Ğ', 'Ş', 'Ö', 'Ç'), $value);
+			$value = strtoupper($value);
 			$result = $this->Arac_Model->findByCritOrderByDate($criterion, $value);
 			$data['list'] = $result;
 			$this->load->view('header');
@@ -159,10 +159,11 @@ class Welcome extends CI_Controller {
 			$upload_data = $this->upload->data(); //Returns array of containing all of the data related to the file you uploaded.
 			$file_name = $upload_data['file_name'];
 			$result = $this->csvreader->parse_file('uploads/'.$file_name);
-			$this->Arac_Model->deleteAll();
 			if ($this->Arac_Model->saveAll($result)) {
+				$this->Arac_Model->deleteAll();
+				$this->Arac_Model->saveAll($result);
 				$this->load->view('header');
-				$this->load->view('upload_success', $data);
+				$this->load->view('upload_success');
 			} else {
 				$data['error'] = array('error' => $this->upload->display_errors());
 				$this->load->view('header');

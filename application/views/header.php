@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset='utf-8'>
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<title>Verdi Oto Yakalamalı Araç Listesi</title>
 	<style media="screen">

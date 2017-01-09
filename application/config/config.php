@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'http://kingsportv.com/verdi/';
-$config['base_url'] = 'http://verdioto.herokuapp.com';
+$config['base_url'] = 'http://localhost:8080/verdi/';
+// $config['base_url'] = $_ENV['BASE_URL'];
 
 /*
 |--------------------------------------------------------------------------

@@ -12,8 +12,9 @@ class CSVReader {
         $keys_values = array();
         $file = fopen($p_Filepath, 'r');
         $this->fields = fgetcsv($file, $this->max_row_size, $this->separator, $this->enclosure);
-        $this->fields = array_map("utf8_encode", $this->fields);
+        header('Content-Type: text/html; charset=utf-8');
         foreach ($this->fields as $field) {
+            $field = utf8_encode($field);
             $keys_values[] = $field;
         }
         $content    =   array();
@@ -33,7 +34,7 @@ class CSVReader {
                     $new_values =   $this->escape_string($values);
                     for($j=0;$j<count($keys);$j++){
                         if($keys[$j] != ""){
-                            $arr[$keys[$j]] =   $new_values[$j];
+                            $arr[$keys[$j]] =  str_replace(array('Ý', 'Þ', 'Ð', 'ý', 'þ'), array('İ', 'Ş', 'Ğ', 'ı', 'ş'),  $new_values[$j]);
                         }
                     }
 

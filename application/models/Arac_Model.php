@@ -77,7 +77,7 @@ class Arac_Model extends CI_Model
             }
             $this->em->persist($arac);
         }
-        return $this->em->flush()?TRUE:FALSE;
+        return $this->em->flush()?:True;
     }
 
 }
