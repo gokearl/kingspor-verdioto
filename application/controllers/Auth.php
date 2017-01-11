@@ -37,7 +37,7 @@ class Auth extends CI_Controller {
         {
             // echo "girdi";
             // $data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
-            $data['message'] = "Kullanıcı adı ya da şifre boş bırakılamaz!";
+            $data['message'] = $this->session->flashdata('message', 'Kullanıcı adı ya da şifre boş bırakılamaz!');
             $this->load->view('auth/login',$data);
         }
         else
@@ -48,7 +48,7 @@ class Auth extends CI_Controller {
             }
             else
             {
-                $this->session->set_flashdata('message', $this->authentication->errors());
+                $data['message'] = $this->session->flashdata('message', 'Kullanıcı adı ya da şifre hatalı!');
                 redirect('auth/login');
             }
             $this->load->view('auth/login', $data);

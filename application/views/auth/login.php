@@ -37,9 +37,9 @@
         </div><br/>
         <div id="message" ><?php echo $message;?></div>
         <form class="w3-container" method="post" action="auth/login">
-        <label for="username">Username:</label><br/>
+        <label for="username">Kullanıcı Adı:</label><br/>
         <input type="text" name="username" value="<?php echo set_value('username'); ?>"/><br/>
-        <label for="password">Password:</label><br/>
+        <label for="password">Şifre:</label><br/>
         <input type="password" name="password" value="<?php echo set_value('password'); ?>"/><br/>
         <input style="margin: 5px 0px;" type="submit" value="Giriş" />
         <?php echo form_close(); ?>
